@@ -33,7 +33,7 @@ const getBaseUrl = () => {
       ? window.location.origin
       : process.env.VERCEL_URL
         ? `https://${process.env.VERCEL_URL}`
-        : `http://localhost:${process.env.PORT ?? 3000}`;
+        : `http://localhost:${process.env.WEB_PORT ?? 3000}`;
 
   return `${hostname}${env.NEXT_PUBLIC_BASE_PATH ?? ""}`;
 };
