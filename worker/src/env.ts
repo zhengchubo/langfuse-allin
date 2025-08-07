@@ -8,7 +8,7 @@ const EnvSchema = z.object({
     .default("development"),
   DATABASE_URL: z.string(),
   HOSTNAME: z.string().default("0.0.0.0"),
-  PORT: z.coerce
+  WORKER_PORT: z.coerce
     .number() // ".env files convert numbers to strings, therefore we have to enforce them to be numbers"
     .positive()
     .max(65536, `options.port should be >= 0 and < 65536`)
